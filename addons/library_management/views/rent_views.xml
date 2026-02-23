@@ -25,7 +25,7 @@
                             string="Повернути книгу"
                             type="object"
                             class="btn-primary"
-                            invisible="return_date != False"/>
+                            invisible="return_date"/>
                 </header>
                 <sheet>
                     <group>

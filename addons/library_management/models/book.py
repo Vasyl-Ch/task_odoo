@@ -24,6 +24,9 @@ class LibraryBook(models.Model):
     )
 
     def action_open_rent_wizard(self) -> dict:
+        """
+        Opens the rental wizard for the current book.
+        """
         return {
             "type": "ir.actions.act_window",
             "res_model": "library.rent.wizard",

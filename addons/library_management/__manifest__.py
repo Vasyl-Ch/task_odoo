@@ -6,6 +6,7 @@
     "category": "Services",
     "depends": ["base", "contacts"],
     "data": [
+        "security/ir.model.access.csv",
         "views/book_views.xml",
         "views/rent_views.xml",
         "wizard/rent_wizard_views.xml"
