@@ -44,3 +44,11 @@ class LibraryRent(models.Model):
                     raise ValidationError(
                         "Книга вже видана і не повернена!"
                     )
+
+    def action_return_book(self):
+        """
+        Captures the return of the book:
+        sets the date and makes the book available.
+        """
+        self.return_date = fields.Date.today()
+        self.book_id.is_available = True
