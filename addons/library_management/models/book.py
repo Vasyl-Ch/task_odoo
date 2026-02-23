@@ -3,7 +3,7 @@ from odoo import models, fields
 
 class LibraryBook(models.Model):
     """
-   # Book model for library.
+    Book model for library.
     """
     _name = "library.book"
     _description = "Library Book"
