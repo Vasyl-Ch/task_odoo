@@ -1,0 +1,36 @@
+<odoo>
+    <!-- Форма wizard: відкривається у popup вікні при натисканні "Видати книгу" -->
+    <record id="view_library_rent_wizard_form" model="ir.ui.view">
+        <field name="name">library.rent.wizard.form</field>
+        <field name="model">library.rent.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Видати книгу">
+                <sheet>
+                    <group>
+                        <field name="book_id" readonly="1"/>
+                        <field name="partner_id"/>
+                    </group>
+                </sheet>
+
+                <footer>
+                    <button name="action_confirm"
+                            string="Підтвердити"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Скасувати"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action: відкриває wizard у режимі діалогового вікна (new) -->
+    <record id="action_library_rent_wizard" model="ir.actions.act_window">
+        <field name="name">Видати книгу</field>
+        <field name="res_model">library.rent.wizard</field>
+        <field name="view_mode">form</field>
+        <!-- target="new" означає що відкриється як popup, а не окрема сторінка -->
+        <field name="target">new</field>
+    </record>
+</odoo>
