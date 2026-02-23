@@ -19,7 +19,7 @@ class LibraryRentWizard(models.TransientModel):
         string="Book"
     )
 
-    def action_confirm(self):
+    def action_confirm(self) -> dict:
         """Creates a lease record and marks the book as unavailable."""
         self.env["library.rent"].create([{
             "partner_id": self.partner_id.id,

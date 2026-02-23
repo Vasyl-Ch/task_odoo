@@ -23,7 +23,7 @@ class LibraryBook(models.Model):
         default=True
     )
 
-    def action_open_rent_wizard(self):
+    def action_open_rent_wizard(self) -> dict:
         return {
             "type": "ir.actions.act_window",
             "res_model": "library.rent.wizard",

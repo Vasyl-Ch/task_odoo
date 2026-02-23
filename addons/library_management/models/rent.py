@@ -27,7 +27,7 @@ class LibraryRent(models.Model):
 
     # Constraint для перевірки Якщо книга не повернена
     @api.constrains("book_id", "return_date")
-    def _check_book_availability(self):
+    def _check_book_availability(self) -> None:
         """
         Prevents renting the same book twice
         if it was not returned.
@@ -45,7 +45,7 @@ class LibraryRent(models.Model):
                         "Книга вже видана і не повернена!"
                     )
 
-    def action_return_book(self):
+    def action_return_book(self) -> None:
         """
         Captures the return of the book:
         sets the date and makes the book available.
