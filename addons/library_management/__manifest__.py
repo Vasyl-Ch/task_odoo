@@ -5,7 +5,9 @@
     "author": "Vasyl Cherkes",
     "category": "Services",
     "depends": ["base", "contacts"],
-    "data": [],
+    "data": [
+        "views/book_views.xml",
+    ],
     "installable": True,
     "application": True,
 }
