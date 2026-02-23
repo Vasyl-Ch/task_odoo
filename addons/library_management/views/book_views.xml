@@ -8,7 +8,7 @@
                 <field name="name"/>
                 <field name="author"/>
                 <field name="published_date"/>
-                <field name="is_available"/>
+                <field name="is_available" widget="boolean_toggle"/>
             </list>
         </field>
     </record>
@@ -19,6 +19,13 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="action_open_rent_wizard"
+                            string="Видати книгу"
+                            type="object"
+                            class="btn-primary"
+                            invisible="not is_available"/>
+                </header>
                 <sheet>
                     <group>
                         <field name="name"/>

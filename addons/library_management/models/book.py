@@ -22,3 +22,12 @@ class LibraryBook(models.Model):
         string="Available",
         default=True
     )
+
+    def action_open_rent_wizard(self):
+        return {
+            "type": "ir.actions.act_window",
+            "res_model": "library.rent.wizard",
+            "view_mode": "form",
+            "target": "new",
+            "context": {"default_book_id": self.id},
+        }

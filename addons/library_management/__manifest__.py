@@ -7,7 +7,8 @@
     "depends": ["base", "contacts"],
     "data": [
         "views/book_views.xml",
-        "views/rent_views.xml"
+        "views/rent_views.xml",
+        "wizard/rent_wizard_views.xml"
     ],
     "installable": True,
     "application": True,
